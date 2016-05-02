@@ -18,17 +18,13 @@ public class CustomQueue<E> {
 
     public void put(E e) throws InterruptedException {
         full.acquire();
-        System.out.println("Add: full acquired!");
         empty.release();
-        System.out.println("Add: full released!");
         queue.add(e);
     }
 
     public E take() throws InterruptedException {
             empty.acquire();
-            System.out.println("Remove: empty acquired!");
             full.release();
-            System.out.println("Remove: full released!");
             return queue.removeFirst();
     }
 }
