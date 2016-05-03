@@ -20,7 +20,7 @@ This project solves four classical synchronization problems:
  		
  3. "Dining philosophers" problem (EatingPhilosophers package).
  
- Five philosophers sit at round table with 5 plates of spaghetti, each one belongs to some philosopher. Between plates placed one fork. Philosophers either think or eat. To start eating philosopher must take two adjacent. Each fork is held only by one philosopher, so if another philosopher want to take the fork he need to wait until it will be released. https://en.wikipedia.org/wiki/Dining_philosophers_problem
+ Five philosophers are sitting at a round table with 5 plates of spaghetti on it. Philosophers got one plate each. One fork is laying between each pair of plates in the circle. Philosophers can either think or eat. To start to eat, a philosopher must take two adjacent to his/her plate. A fork can be held only by one philosopher at a time, so that another philosopher, willing to take it, has to wait until the fork is released. https://en.wikipedia.org/wiki/Dining_philosophers_problem
  
  		This problem has solved by using locks.
  		
