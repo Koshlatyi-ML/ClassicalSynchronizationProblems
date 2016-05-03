@@ -26,6 +26,6 @@ This project solves four classical synchronization problems:
  		
  4. "Sleeping barber" problem (BarberShop package).
  
- The barber shop has two rooms - waiting room which has limited number of places and working room which has single сhair, where client is serving. Firsty, visitors come into waiting room and if there any free spaces they take place in the queue otherwise they leave the barber shop. If there any visitors in waiting room barber calls ome of them to his room and haircuts him. After serving visitor leaves barber shop and barber calls next one if it exists, otherwise he waits for some visitors. https://en.wikipedia.org/wiki/Sleeping_barber_problem
+ The barber shop has two rooms - a waiting with a limited number of places and a treatment room with a single сhair. First, drop-in customres get into the waiting room. If there is any free waiting place, a customer takes the place in the queue. Otherwise, the customer leaves the barber shop. If there any customers in the waiting room, a barber asks the first one in the queue to proceed into the treatment room. Then the barber makes the customer a haircut. Afte the treatment is completed, the customer leaves the barber shop and the barber calls the next customer (if there is any waiting). Otherwise, the barber waits for new drop-in customers. https://en.wikipedia.org/wiki/Sleeping_barber_problem
  
  		This problem has solved by using monitors.
