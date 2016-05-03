@@ -3,15 +3,18 @@
 This project solves four classical synchronization problems:
  1. "Producer-consumer" problem (ProducerConsumer package). 
  
- 	   There are existing two threads. One of them "producer" generates messages, and the other, "consumer", receives them and for further processing.
-		 Threads interacts with each other by common storage with fixed capacity. "Producer" puts message into queue if it has empty space,
-		 otherwise he is waiting for releasing space in the queue. "Consumer" retreives message from queue if it isn't empty, otherwise he is waiting
-		 for adding some data into the queue. https://en.wikipedia.org/wiki/Producer%E2%80%93consumer_problem
+ 	   There are two threads. In one of them "producer" generates messages; in the other, "consumer", receives them for further processing.
+		 The threads interact with each other by means of a common storage with fixed capacity. "Producer" enters a new message into the queue if there is enough empty space.
+		 Otherwise, it waits for releasing space in the queue. "Consumer" retreives the message from the queue if the last is not empty. Otherwise, it waits
+		 for new data to be added into the queue. https://en.wikipedia.org/wiki/Producer%E2%80%93consumer_problem
 		 
 		 This problem has solved by using semaphores.
  2. "Readers-writers" problem (WritersReaders package).
  
- There are existing two groups of threads which shares common storage. One of them "readers" performs only reading data from storage without deleting it. "Writers" performs recording new data in a storage. There are some restrictions in this case: threads-writers can't work together, and no process of reading can be performed while some thread puts new data in the storage, also threads-readres can be executing at the same time with each other. https://en.wikipedia.org/wiki/Readers%E2%80%93writers_problem
+ There exist two groups of threads which share common storage. In one of them, "readers" raed stored data, being able to neither delete nor edit it. In the other, "writers" add data records into the storage. Certain restrictions apply in this case:
+	1) multiple "writers" cannot operate simultaneously;
+ 	2) read operations is not possible while new data is being entered into the storage;
+	3) multiple "readers can operate simultaneously. https://en.wikipedia.org/wiki/Readers%E2%80%93writers_problem
  		
  		This problem has solved by using wait()/notify() methods.
  		
